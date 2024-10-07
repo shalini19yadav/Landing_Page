@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  header {
+    background: #fff;
+    box-shadow: 0px 0px 10px 10px gainsboro;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    color: #000;
+    /* padding: 10px 20px; */
+  }
+  .logo{
+    font-size: 18px;
+    font-weight: 900;
+
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+  }
+  
+  .cta {
+    background-color: rgb(189, 117, 35);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .hero {
+    background:linear-gradient(rgb(0, 0, 0, 0.8),rgb(0, 0, 0, 0.6),rgb(0, 0, 0, 0.5)), url('https://img.freepik.com/premium-photo/laptop-with-blank-screen-desk-table-with-blur-office-interior-background_1028938-92895.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .features {
+    padding: 50px;
+  }
+  
+  .feature {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+    
+    background-image:linear-gradient(rgb(0, 0, 0, 0.3),rgb(0, 0, 0, 0.6),rgb(0, 0, 0, 0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw0sptM5le5hCcSV2CiO-bMBSkn-yySHrhUg&s');
+    gap: 10px;
+  }
+  .feature h2{
+    color: #000;
+    font-size: 22px;
+  }
+  .feature p{
+    width: 750px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  
+  footer {
+    background: rgb(94, 76, 55);
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+
+
+  @media (max-width: 950px) {
+    .features {
+        flex-direction: column; 
+        padding: 30px 20px; 
+    }
+    .feature p {
+        width: 100%; 
+        text-align: center;
+        margin-bottom: 20px; 
+    }
+  }
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav .nav-links {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        background-color: #333; 
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+
+    .nav-active {
+        display: flex !important; 
+    }
+
+    .cta {
+        padding: 8px 16px; 
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem; 
+    }
+
+    .features {
+        flex-direction: column; 
+        padding: 30px 20px; 
+    }
+
+    .feature {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .logo {
+        margin-bottom: 10px; 
+    }
+
+    .hero h1 {
+        font-size: 2rem; 
+        margin: 10px;
+    }
+
+    .hero p {
+        font-size: 1rem; 
+        padding: 0 10px; 
+    }
+
+    .cta {
+        font-size: 0.9rem; 
+        padding: 10px 15px; 
+    }
+
+    .features {
+        flex-direction: column; 
+        padding: 20px; 
+    }
+
+    .feature {
+        width: 100%; 
+    }
+
+    footer {
+        padding: 10px; 
+    }
+
+    .social-links a {
+        display: flex; 
+        flex-direction: column; 
+        margin: 5px 0; 
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem; 
+    }
+
+    .cta {
+        font-size: 1.2rem;
+        padding: 15px 30px; 
+    }
+
+    .features {
+        justify-content: space-between; 
+        padding: 50px; 
+    }
+
+    
+}
